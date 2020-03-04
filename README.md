@@ -7,7 +7,7 @@
 </a>
 </p>
 
-## :floppy_disk: Installation
+## Installation
 
 ```bash
 # clone the repo
@@ -17,7 +17,7 @@ $ git clone https://github.com/sdushantha/facebook-dl.git
 $ pip3 install -r requirements.txt
 ```
 
-## :hammer: Usage
+## Usage
 ```
 usage: facebook-dl.py [-h] url [resolution]
 ```
@@ -37,7 +37,7 @@ Download video in Standard Definition.
 $ python3 facebook-dl.py https://www.facebook.com/nike/videos/10155846581253445/ sd
 ```
 
-## :scroll: License
+## License
 MIT License
 
 Copyright (c) 2018 Siddharth Dushantha
