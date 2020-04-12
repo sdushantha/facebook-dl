@@ -2,9 +2,7 @@
 > Download facebook videos from your terminal
 
 <p align="center">
-<a href="https://asciinema.org/a/n31XoO37sBA2ayX2TLZiNgbWt">
-<img src="https://user-images.githubusercontent.com/27065646/42167369-2f894e5a-7e0e-11e8-9f6e-ab15da00283d.png">
-</a>
+<img src="https://user-images.githubusercontent.com/27065646/79065713-ba4f3f00-7cb2-11ea-9c08-61842fcc6791.gif">
 </p>
 
 ## Installation
