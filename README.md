@@ -5,6 +5,8 @@
 <img src="https://user-images.githubusercontent.com/27065646/79065713-ba4f3f00-7cb2-11ea-9c08-61842fcc6791.gif" width="90%" height="90%">
 </p>
 
+[![Support me!](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/XoJfSVI)
+
 ## Installation
 
 ```bash
