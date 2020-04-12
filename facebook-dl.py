@@ -22,15 +22,15 @@ def extract_url(html, quality):
     """
     if quality == "sd":
         # Standard Definition video
-        url = re.search('sd_src:"(.+?)"', html)[0]
+        url = re.search('sd_src:"(.+?)"', html).group(0)
     else:
         # High Definition video
         url = re.search('hd_src:"(.+?)"', html)[0]
 
         # cleaning the url
-        url = url.replace('hd_src:"', '')
-        url = url.replace('sd_src:"', '')
-        url = url.replace('"', "")
+    url = url.replace('hd_src:"', '')
+    url = url.replace('sd_src:"', '')
+    url = url.replace('"', "")
 
     return url
 
