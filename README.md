@@ -1,5 +1,7 @@
 # facebook-dl
-> Download facebook videos from your terminal
+<p align="center">
+  Very <b>minimal</b> Facebook downloaderwritten in <b>28 lines</b> of Python code (not including comments and blank spaces)
+ </p>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/27065646/79065713-ba4f3f00-7cb2-11ea-9c08-61842fcc6791.gif" width="90%" height="90%">
