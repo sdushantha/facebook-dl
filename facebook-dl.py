@@ -20,6 +20,11 @@ def extract_url(html, quality):
     html       -    the html code of the webpage where the video is located
     quality    -    the quality of the video that should be downloaded (SD or HD)
     """
+
+    # Here we are using a if-then-else onliner statement.
+    # It might look a little confusing at first, but it makes a lot of sense
+    # once you get an understanding of it.
+    # Read this if you are a little confused: https://stackoverflow.com/a/2802748/9215267
     return re.findall(f"{'sd_src' if quality == 'sd' else 'hd_src'}:\"(.+?)\"", html)[0]
 
 
