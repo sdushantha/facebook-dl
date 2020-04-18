@@ -1,6 +1,6 @@
 # facebook-dl
 <p align="center">
-  Very <b>minimal</b> Facebook downloaderwritten in <b>28 lines</b> of Python code (not including comments and blank spaces)
+  Very <b>minimal</b> Facebook downloader written in <b>28 lines</b> of Python code (not including comments and blank spaces)
  </p>
 
 <p align="center">
