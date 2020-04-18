@@ -27,16 +27,16 @@ usage: facebook-dl.py [-h] url [resolution]
 ---
 Download video in High Definition.
 ```bash
-$ python3 facebook-dl.py https://www.facebook.com/nike/videos/10155846581253445/ hd
+$ python3 facebook-dl.py https://www.facebook.com/McLaren.Racing/videos/10155088130291413 hd
 ```
 OR
 ```bash
 # Without mentioning the resolution will also download in HD
-$ python3 facebook-dl.py https://www.facebook.com/nike/videos/10155846581253445/
+$ python3 facebook-dl.py https://www.facebook.com/McLaren.Racing/videos/10155088130291413
 ```
 Download video in Standard Definition.
 ```bash
-$ python3 facebook-dl.py https://www.facebook.com/nike/videos/10155846581253445/ sd
+$ python3 facebook-dl.py https://www.facebook.com/McLaren.Racing/videos/10155088130291413 sd
 ```
 
 ## License
