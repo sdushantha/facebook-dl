@@ -21,7 +21,7 @@ def extract_url(html, quality):
     quality    -    the quality of the video that should be downloaded (SD or HD)
     """
 
-    # Here we are using an if-then-else onliner statement.
+    # Here we are using an if-then-else one-liner statement.
     # It might look a little confusing at first, but it makes a lot of sense
     # once you get an understanding of it.
     # Read this if you are a little confused: https://stackoverflow.com/a/2802748/9215267
