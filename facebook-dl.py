@@ -31,8 +31,8 @@ def extract_url(html, quality):
 def main():
     """
     This function takes no arguments.
-    Yes, this is useless comment, but pylint requires all
-    functions to have doc-string
+    Yes, this is a useless comment, but pylint requires all
+    functions to have a doc-string
     """
     parser = argparse.ArgumentParser(description="Download videos from facebook from your terminal")
 
