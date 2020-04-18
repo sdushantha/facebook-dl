@@ -20,14 +20,7 @@ def extract_url(html, quality):
     html       -    the html code of the webpage where the video is located
     quality    -    the quality of the video that should be downloaded (SD or HD)
     """
-    if quality == "sd":
-        # Standard Definition video
-        url = re.findall('sd_src:"(.+?)"', html)[0]
-    else:
-        # High Definition video
-        url = re.findall('hd_src:"(.+?)"', html)[0]
-
-    return url
+    return re.findall(f"{'sd_src' if quality == 'sd' else 'hd_src'}:\"(.+?)\"", html)[0]
 
 
 def main():
