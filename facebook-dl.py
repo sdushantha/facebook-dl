@@ -23,13 +23,20 @@ def main():
 
     print("Fetching source code...", end="\r", flush=True)
     request = requests.get(args.url)
-    sys.stdout.write(ERASE_LINE)
+    print(ERASE_LINE, end="\r", flush=True)
     
     print(f"\033[92m✔\033[0m Fetched source code")
 
+    # Create the file name by extracting the video ID from html and then add
+    # "hd" or "sd" depending on the quality of the resolution that is being downloaded.
+    #
+    # To decide whether to use "hd or "sd" we are using an if-then-else
+    # one-liner statement. It might look a little confusing at first, but it
+    # makes a lot of sense once you get an understanding of it.
+    # Read this if you are a little confused: https://stackoverflow.com/a/2802748/9215267
+    file_name = str(re.findall(r"videos\/(.+?)\"", request.text)[-1].replace("/", "")) + f"_{'sd' if args.resolution == 'sd' else 'hd'}.mp4"
+    
     print("Downloading video...", end="\r", flush=True)
-
-    file_name = str(re.findall(r"videos\/(.+?)\"", request.text)[-1].replace("/", "")) + f"_{'sd_src' if args.resolution == 'sd' else 'hd_src'}.mp4"
 
     try:
         request = requests.get(re.findall(f"{'sd_src' if args.resolution == 'sd' else 'hd_src'}:\"(.+?)\"", request.text)[0])
@@ -42,7 +49,7 @@ def main():
     with open(file_name, "wb") as f:
         f.write(request.content)
 
-    sys.stdout.write(ERASE_LINE)
+    print(ERASE_LINE, end="\r", flush=True)
     print(f"\033[92m✔\033[0m Video downloaded: {file_name}")
 
 if __name__ == "__main__":
