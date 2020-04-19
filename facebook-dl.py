@@ -4,7 +4,6 @@
 
 import re
 import sys
-import random
 import argparse
 import requests
 
@@ -28,9 +27,9 @@ def main():
     
     print(f"\033[92m✔\033[0m Fetched source code")
 
-    # Generates a random number with will be the file name
-    path = f"{str(random.random())[3:12]}.mp4"
     print("Downloading video...", end="\r", flush=True)
+
+    file_name = str(re.findall(r"videos\/(.+?)\"", request.text)[-1].replace("/", "")) + f"_{'sd_src' if args.resolution == 'sd' else 'hd_src'}.mp4"
 
     try:
         request = requests.get(re.findall(f"{'sd_src' if args.resolution == 'sd' else 'hd_src'}:\"(.+?)\"", request.text)[0])
@@ -39,11 +38,12 @@ def main():
         print("\033[91m✘\033[0m Video could not be downloaded")
         sys.exit()
 
-    with open(path, "wb") as f:
+    # Write the content to the file
+    with open(file_name, "wb") as f:
         f.write(request.content)
 
     sys.stdout.write(ERASE_LINE)
-    print(f"\033[92m✔\033[0m Video downloaded: {path}")
+    print(f"\033[92m✔\033[0m Video downloaded: {file_name}")
 
 if __name__ == "__main__":
     main()
