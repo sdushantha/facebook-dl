@@ -49,7 +49,7 @@ def main():
     try:
         request = requests.get(re.findall(f"{'sd_src' if args.resolution == 'sd' else 'hd_src'}:\"(.+?)\"", request.text)[0])
     except IndexError:
-        sys.stdout.write(ERASE_LINE)
+        print(ERASE_LINE, end="\r", flush=True)
         print("\e[91m✘\e[0m Video could not be downloaded")
         sys.exit()
 
