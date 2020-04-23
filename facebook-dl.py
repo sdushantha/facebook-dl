@@ -9,7 +9,6 @@
 #         does not support escape sequences.
 #
 
-
 import re
 import sys
 import argparse
@@ -33,7 +32,7 @@ def main():
     request = requests.get(args.url)
     print(ERASE_LINE, end="\r", flush=True)
     
-    print(f"\033[92m✔\033[0m Fetched source code")
+    print("\e[92m✔\e[0m Fetched source code")
 
     # Create the file name by extracting the video ID from html and then add
     # "hd" or "sd" depending on the quality of the resolution that is being downloaded.
