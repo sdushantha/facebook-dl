@@ -31,8 +31,8 @@ def main():
     print("Fetching source code...", end="\r", flush=True)
     request = requests.get(args.url)
     print(ERASE_LINE, end="\r", flush=True)
-    
-    print("\e[92m✔\e[0m Fetched source code")
+
+    print("\033[92m✔\033[0m Fetched source code")
 
     # Create the file name by extracting the video ID from html and then add
     # "hd" or "sd" depending on the quality of the resolution that is being downloaded.
@@ -42,7 +42,7 @@ def main():
     # makes a lot of sense once you get an understanding of it.
     # Read this if you are a little confused: https://stackoverflow.com/a/2802748/9215267
     file_name = str(re.findall(r"videos\/(.+?)\"", request.text)[-1].replace("/", "")) + f"_{'sd' if args.resolution == 'sd' else 'hd'}.mp4"
-    
+
     print("Downloading video...", end="\r", flush=True)
 
     try:
@@ -58,13 +58,6 @@ def main():
 
     print(ERASE_LINE, end="\r", flush=True)
 
-    # You might be wondering why in this line the ansi code starts with
-    # \033, but all other ones starts with \e.
-    # This is because \e for some bizzar reason does not work with f-strings.
-    # I did try doing a quick Google search, but did not find anything so thats
-    # why I am equally confused as you are to why \e wont work.
-    # If you would like to learn more about \033 and \e take look at
-    # this link: https://unix.stackexchange.com/a/89817/342070
     print(f"\033[92m✔\033[0m Video downloaded: {file_name}")
 
 if __name__ == "__main__":
